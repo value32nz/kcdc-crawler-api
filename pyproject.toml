@@ -1,0 +1,16 @@
+[project]
+name            = "kcdc-crawler-api"
+version         = "0.1.0"
+description     = "Tiny API that crawls Kapiti Coast District Plan PDFs and lets ChatGPT search them"
+requires-python = ">=3.11"
+
+# ↓ One line per library – Replit will install these when you press Run
+dependencies = [
+    "flask",
+    "requests",
+    "beautifulsoup4",
+    "PyPDF2",
+    "pdfminer.six",
+    "tqdm"
+    "pyyaml" 
+]

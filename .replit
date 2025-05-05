@@ -1,0 +1,9 @@
+run = "python3 main.py"
+modules = ["python-3.11"]
+
+[nix]
+packages = ["psmisc", "python"]
+
+[[ports]]
+localPort = 3000
+externalPort = 80

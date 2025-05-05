@@ -1,0 +1,31 @@
+openapi: 3.1.0
+info:
+  title: KCDC Planning Lookup
+  version: 1.0.0
+paths:
+  /search:
+    get:
+      summary: Search Kapiti Coast District Plan PDFs
+      parameters:
+        - name: q
+          in: query
+          required: true
+          schema:
+            type: string
+          example: building height in residential zone
+      responses:
+        '200':
+          description: JSON list of matches
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  query: { type: string }
+                  results:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        url: { type: string }
+                        snippet: { type: string }
